@@ -83,13 +83,6 @@
     return svg;
   }
 
-  // Formatadores Intl custam caro para criar (dados de fuso/idioma): cria uma vez, quando precisar.
-  const formatterCache = new Map();
-  function formatter(key, create) {
-    if (!formatterCache.has(key)) formatterCache.set(key, create());
-    return formatterCache.get(key);
-  }
-
   // Garante no máximo uma execução por frame (scroll/resize).
   function rafThrottle(fn) {
     let queued = false;
@@ -187,18 +180,57 @@
     return m ? `${h}h${String(m).padStart(2, '0')}` : `${h}h`;
   };
 
-  function getSaoPauloNow(date) {
-    const parts = formatter('sp-parts', () => new Intl.DateTimeFormat('en-US', {
-      timeZone: CONFIG.timezone,
-      weekday: 'short',
-      hour: '2-digit',
-      minute: '2-digit',
-      hourCycle: 'h23',
-    })).formatToParts(date);
+  // Data/hora no fuso informado, via Intl.DateTimeFormat. Função autocontida: também roda dentro do Worker.
+  function computeZonedTime(timeZone) {
+    const now = new Date();
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+    }).formatToParts(now);
     const get = (type) => (parts.find((part) => part.type === type) || {}).value;
-    const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday'));
-    const minutes = (Number(get('hour')) % 24) * 60 + Number(get('minute'));
-    return { day, minutes };
+    return {
+      day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday')),
+      minutes: (Number(get('hour')) % 24) * 60 + Number(get('minute')),
+      clock: new Intl.DateTimeFormat('pt-BR', { timeZone, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(now),
+      date: new Intl.DateTimeFormat('pt-BR', { timeZone, weekday: 'long', day: 'numeric', month: 'long' }).format(now),
+    };
+  }
+
+  // O primeiro Intl.DateTimeFormat custa ~50ms (o navegador carrega os dados de fuso/idioma).
+  // Para não travar a página, o cálculo roda num Web Worker; se não der, roda aqui mesmo.
+  function createZonedClock(timeZone) {
+    let worker = null;
+    try {
+      const source = `const compute = ${computeZonedTime.toString()};\nonmessage = (event) => postMessage(compute(event.data));`;
+      worker = new Worker(URL.createObjectURL(new Blob([source], { type: 'text/javascript' })));
+    } catch (error) {
+      worker = null;
+    }
+
+    return () => new Promise((resolve) => {
+      if (!worker) {
+        resolve(computeZonedTime(timeZone));
+        return;
+      }
+      const finish = (data) => {
+        worker.removeEventListener('message', onMessage);
+        worker.removeEventListener('error', onError);
+        window.clearTimeout(timer);
+        resolve(data);
+      };
+      const fallback = () => {
+        worker = null;
+        finish(computeZonedTime(timeZone));
+      };
+      const onMessage = (event) => finish(event.data);
+      const onError = (event) => {
+        event.preventDefault();
+        fallback();
+      };
+      const timer = window.setTimeout(fallback, 3000);
+      worker.addEventListener('message', onMessage);
+      worker.addEventListener('error', onError);
+      worker.postMessage(timeZone);
+    });
   }
 
   function getOpenStatus(now) {
@@ -245,29 +277,19 @@
     body.replaceChildren(...rows);
   }
 
-  function renderPhoneClock(date) {
+  function renderPhoneClock(now) {
     const clock = $('[data-clock]');
     const label = $('[data-clock-date]');
-    if (clock) {
-      clock.textContent = formatter('clock', () => new Intl.DateTimeFormat('pt-BR', {
-        timeZone: CONFIG.timezone, hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
-      })).format(date);
-    }
-    if (label) {
-      const text = formatter('date', () => new Intl.DateTimeFormat('pt-BR', {
-        timeZone: CONFIG.timezone, weekday: 'long', day: 'numeric', month: 'long',
-      })).format(date);
-      label.textContent = text.charAt(0).toUpperCase() + text.slice(1);
-    }
+    if (clock) clock.textContent = now.clock;
+    if (label) label.textContent = now.date.charAt(0).toUpperCase() + now.date.slice(1);
   }
 
   function initOpenStatus() {
     const targets = $$('[data-open-status]');
+    const readClock = createZonedClock(CONFIG.timezone);
     let renderedDay = -1;
 
-    const render = () => {
-      const date = new Date();
-      const now = getSaoPauloNow(date);
+    const render = () => readClock().then((now) => {
       const status = getOpenStatus(now);
 
       targets.forEach((el) => {
@@ -281,8 +303,8 @@
         renderHoursTable(now.day);
         renderedDay = now.day;
       }
-      renderPhoneClock(date);
-    };
+      renderPhoneClock(now);
+    });
 
     render();
     window.setInterval(render, 30000);
@@ -292,12 +314,10 @@
   /* ------------------------------------------------------------------------
      OUTLET: cards renderizados a partir de PRODUCTS (só textContent)
      ------------------------------------------------------------------------ */
+  // Preço inteiro em reais com separador de milhar pt-BR (2399 → "2.399"). Sem Intl: evita ~50ms na 1ª chamada.
   function formatPrice(value) {
-    const parts = formatter('price', () => new Intl.NumberFormat('pt-BR', {
-      style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 0,
-    })).formatToParts(value);
-    const pick = (types) => parts.filter((part) => types.includes(part.type)).map((part) => part.value).join('');
-    return { currency: pick(['currency']), amount: pick(['integer', 'group', 'decimal', 'fraction']) };
+    const amount = String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return { currency: 'R$', amount };
   }
 
   function createProductCard(product) {
