@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- Fontes (Google Fonts, display=swap) carregadas sem bloquear a renderização -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Unbounded:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Unbounded:wght@700;800&amp;display=swap" media="print" data-async-css>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Unbounded:wght@700;800&amp;display=swap"></noscript>
+
+  <script>
+    /* 1) Marca que o JS está ativo; se o main.js não rodar, a marca sai e todo o conteúdo fica visível.
+       2) Aplica o CSS das fontes assim que ele carregar (sem bloquear o primeiro paint). */
+    (function (d) {
+      var html = d.documentElement;
+      var fonts = d.querySelector('link[data-async-css]');
+      html.classList.add('js');
+      d.addEventListener('DOMContentLoaded', function () {
+        if (!html.classList.contains('js-ready')) html.classList.remove('js');
+      });
+      if (fonts) {
+        if (fonts.sheet) fonts.media = 'all';
+        else fonts.addEventListener('load', function () { fonts.media = 'all'; });
+      }
+    })(document);
+  </script>
+
+  <title>MV CELL | Assistência Técnica de Celular em Embu das Artes</title>
+  <meta name="description" content="Conserto de celular, celulares outlet e acessórios em Embu das Artes. Nota 5,0 no Google. Orçamento rápido pelo WhatsApp.">
+  <link rel="canonical" href="https://SEU-USUARIO.github.io/SEU-REPO/">
+  <meta name="theme-color" content="#111014">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="MV CELL | Outlet Cell">
+  <meta property="og:title" content="MV CELL | Assistência Técnica de Celular em Embu das Artes">
+  <meta property="og:description" content="Conserto de celular, celulares outlet e acessórios em Embu das Artes. Nota 5,0 no Google. Orçamento rápido pelo WhatsApp.">
+  <meta property="og:url" content="https://SEU-USUARIO.github.io/SEU-REPO/">
+  <meta property="og:image" content="https://SEU-USUARIO.github.io/SEU-REPO/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Técnico da MV CELL consertando um celular na bancada da loja">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MV CELL | Assistência Técnica de Celular em Embu das Artes">
+  <meta name="twitter:description" content="Conserto de celular, celulares outlet e acessórios em Embu das Artes. Nota 5,0 no Google. Orçamento rápido pelo WhatsApp.">
+  <meta name="twitter:image" content="https://SEU-USUARIO.github.io/SEU-REPO/assets/og.jpg">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" as="image" href="assets/img/loja-1.webp" type="image/webp" fetchpriority="high">
+  <script src="js/main.js" defer></script>
+
+  <!--
+    Google Tag Manager (DESATIVADO). Para ativar: descomente e troque GTM-IDS_AQUI pelo ID do container.
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-IDS_AQUI');</script>
+  -->
+
+  <!--
+    Meta Pixel (DESATIVADO). Para ativar: descomente e troque IDS_AQUI pelo ID do Pixel.
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'IDS_AQUI');
+  fbq('track', 'PageView');
+  </script>
+  -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobilePhoneStore",
+    "name": "MV CELL | Outlet Cell",
+    "description": "Assistência técnica de celular, celulares outlet e acessórios em Embu das Artes.",
+    "url": "https://SEU-USUARIO.github.io/SEU-REPO/",
+    "image": "https://SEU-USUARIO.github.io/SEU-REPO/assets/og.jpg",
+    "telephone": "+55-11-94784-0245",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Estr. dos Orquidófilos, 822 - Vila Maria Auxiliadora",
+      "addressLocality": "Embu das Artes",
+      "addressRegion": "SP",
+      "postalCode": "06843-151",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.659933,
+      "longitude": -46.8600104
+    },
+    "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJnflX-0KrzpQRfvhOjJpKshw",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto custa o conserto?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende do modelo e da peça. Manda o modelo no WhatsApp e a gente passa o valor na hora." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo demora?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Troca de tela e bateria costuma sair em até 1 hora, se tivermos a peça em estoque. Outros reparos levam de 24 a 48h." }
+      },
+      {
+        "@type": "Question",
+        "name": "Tem garantia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. 90 dias em todos os serviços, cobrindo peça e mão de obra." }
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso agendar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não precisa. Mas chamando antes no WhatsApp, a gente já separa a peça e você espera menos." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais formas de pagamento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pix, dinheiro, débito e crédito em até 10x." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!--
+    Google Tag Manager (noscript, DESATIVADO). Ative junto com o bloco do <head>.
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-IDS_AQUI" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  -->
+
+  <!-- Sprite de ícones (SVG inline, traço 2px estilo lucide) -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24">
+      <path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 6v6l4 2"/>
+    </symbol>
+    <symbol id="i-route" viewBox="0 0 24 24">
+      <path d="M3 11 22 2l-9 19-2-8-8-2z"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M20 6 9 17l-5-5"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M5 12h14M12 5v14"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M12 5l7 7-7 7"/>
+    </symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24">
+      <path d="m15 18-6-6 6-6"/>
+    </symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24">
+      <path d="m9 18 6-6-6-6"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path fill="currentColor" stroke="none" d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/>
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24">
+      <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+    </symbol>
+    <symbol id="i-screen" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="14" height="20" rx="2"/>
+      <path d="M12 18h.01M9.5 5.5l2.2 3.2-2 2.1 3.6 2.7"/>
+    </symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24">
+      <path d="M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1M11 7l-3 5h4l-3 5M22 11v2"/>
+    </symbol>
+    <symbol id="i-plug-zap" viewBox="0 0 24 24">
+      <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4ZM2 22l3-3M7.5 13.5 10 11M10.5 16.5 13 14M18 3l-4 4h6l-4 4"/>
+    </symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24">
+      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+      <circle cx="12" cy="13" r="3"/>
+    </symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24">
+      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24">
+      <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+    </symbol>
+    <symbol id="i-case" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="14" height="20" rx="3"/>
+      <rect x="8" y="5" width="4.5" height="5.5" rx="1.5"/>
+      <path d="M15.5 5.5h.01"/>
+    </symbol>
+    <symbol id="i-film" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="14" height="20" rx="2"/>
+      <path d="M8.5 9.5l4-4M8.5 15l7-7"/>
+    </symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24">
+      <path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/>
+    </symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24">
+      <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/>
+    </symbol>
+    <symbol id="i-stand" viewBox="0 0 24 24">
+      <rect x="7" y="2" width="10" height="14" rx="2"/>
+      <path d="M12 16v4M7 22h10"/>
+    </symbol>
+    <symbol id="i-speaker" viewBox="0 0 24 24">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <circle cx="12" cy="14" r="4"/>
+      <path d="M12 6h.01M12 14h.01"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+    </symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24">
+      <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1ZM16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 17.5v-11"/>
+    </symbol>
+    <symbol id="i-store" viewBox="0 0 24 24">
+      <path d="M3 9.5 4.6 4h14.8L21 9.5M3 9.5h18M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M5 12.3V20h14v-7.7M10 20v-4.5h4V20"/>
+    </symbol>
+    <symbol id="i-phone-ok" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="14" height="20" rx="2"/>
+      <path d="m9 12 2 2 4-4"/>
+    </symbol>
+    <symbol id="wave" viewBox="0 0 1440 52" preserveAspectRatio="none">
+      <path fill="currentColor" stroke="none" d="M0 26 Q30 22.0 60 26 Q90 30.3 120 26 Q150 21.2 180 26 Q210 31.5 240 26 Q270 19.6 300 26 Q330 33.5 360 26 Q390 17.3 420 26 Q450 36.0 480 26 Q510 14.6 540 26 Q570 38.9 600 26 Q630 11.4 660 26 Q690 42.3 720 26 Q750 7.9 780 26 Q810 46.1 840 26 Q870 3.9 900 26 Q930 50.2 960 26 Q990 -0.4 1020 26 Q1050 54.7 1080 26 Q1110 -5.0 1140 26 Q1170 59.5 1200 26 Q1230 -10.0 1260 26 Q1290 64.6 1320 26 Q1350 -15.3 1380 26 Q1410 70.0 1440 26 V0 H0Z"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ==========================================================
+       1. HEADER
+       ========================================================== -->
+  <header class="header" id="topo" data-header>
+    <div class="container header__inner">
+      <div class="header__brand">
+        <a class="brand" href="#inicio" aria-label="MV CELL, voltar ao início">
+          <svg class="brand__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>
+          <span class="brand__name">MV CELL</span>
+        </a>
+        <p class="status" data-open-status>
+          <span class="status__dot" aria-hidden="true"></span>
+          <span class="status__text" data-status-text>Seg a sáb, a partir das 9h</span>
+        </p>
+      </div>
+
+      <nav class="nav" aria-label="Seções da página">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#servicos">Serviços</a></li>
+          <li><a class="nav__link" href="#outlet">Outlet</a></li>
+          <li><a class="nav__link" href="#avaliacoes">Avaliações</a></li>
+          <li><a class="nav__link" href="#onde-estamos">Onde estamos</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--signal btn--sm header__wa" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20a%20MV%20CELL." data-wa-msg="Olá! Vim pelo site e quero falar com a MV CELL." data-origin="header" target="_blank" rel="noopener noreferrer">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+        <span><span class="header__wa-long">Chamar no </span>WhatsApp</span>
+      </a>
+
+      <a class="icon-btn header__call" href="tel:+5511947840245" aria-label="Ligar para a MV CELL: (11) 94784-0245">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- ==========================================================
+         2. HERO
+         ========================================================== -->
+    <section class="hero grain" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <a class="hero__badge" href="#avaliacoes">
+            <span class="hero__stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+            <span>5,0 no Google · 182 avaliações</span>
+          </a>
+
+          <h1 class="hero__title" id="hero-title">Seu celular de volta, do jeito <span class="scribble">certo<svg class="scribble__line" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M4 13C42 6 96 3 140 6c22 1.5 40 4 54 7.5M38 19c40-3.5 92-4.5 128-2"/></svg></span>.</h1>
+
+          <p class="hero__sub">Conserto, celulares outlet e acessórios em Embu das Artes. Orçamento rápido pelo WhatsApp, sem enrolação.</p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--signal btn--lg" id="hero-cta" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero fazer um orçamento. Meu celular é: " data-origin="hero" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+              Fazer orçamento no WhatsApp
+            </a>
+            <a class="btn btn--outline-cream btn--lg" href="#outlet">Ver celulares outlet</a>
+          </div>
+
+          <p class="hero__micro">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
+            <span>Resposta rápida em horário comercial · Estr. dos Orquidófilos, 822</span>
+          </p>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="hero__photo">
+            <picture>
+              <source srcset="assets/img/loja-1.webp" type="image/webp">
+              <img src="assets/img/loja-1.jpg" width="755" height="396" fetchpriority="high" alt="Técnico da MV CELL consertando um celular na bancada da loja em Embu das Artes">
+            </picture>
+          </figure>
+
+          <div class="phone" aria-hidden="true">
+            <div class="phone__screen">
+              <div class="phone__glow"></div>
+              <div class="phone__lock">
+                <span class="phone__clock" data-clock>9:00</span>
+                <span class="phone__date" data-clock-date>Embu das Artes</span>
+              </div>
+              <div class="phone__notif">
+                <span class="phone__app"><svg viewBox="0 0 20 16" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg></span>
+                <span class="phone__notif-body">
+                  <span class="phone__notif-title">MV CELL <small>agora</small></span>
+                  <span class="phone__notif-text">Seu celular está pronto <svg class="check-emoji" viewBox="0 0 16 16" focusable="false"><rect width="16" height="16" rx="4" fill="#2BB24C"/><path d="M4.2 8.4 6.8 11l5-5.6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </span>
+              </div>
+              <svg class="phone__cracks" viewBox="0 0 100 200" preserveAspectRatio="none" focusable="false">
+                <path pathLength="1" d="M63 62 52 47l-6-17-11-28"/>
+                <path pathLength="1" d="M63 62l15-9 11-14 11-6"/>
+                <path pathLength="1" d="M63 62l9 21-4 22 7 26 4 22"/>
+                <path pathLength="1" d="M63 62 44 72l-21-4-23 12"/>
+                <path pathLength="1" d="M63 62l-3 30-16 21-8 30"/>
+                <path pathLength="1" d="M63 62l19 13 18 4"/>
+                <path pathLength="1" d="M56 55l10-3 6 8-7 8-9-3z"/>
+              </svg>
+              <div class="phone__status">
+                <span class="phone__carrier">MV CELL</span>
+                <span class="phone__icons">
+                  <span class="phone__bars"><i></i><i></i><i></i><i></i></span>
+                  <span class="phone__battery"><i></i></span>
+                </span>
+              </div>
+              <span class="phone__notch"></span>
+              <span class="phone__home"></span>
+            </div>
+          </div>
+
+          <span class="sticker sticker--volt sticker--a" aria-hidden="true">Nota 5,0 <svg class="icon"><use href="#i-star"/></svg></span>
+          <span class="sticker sticker--cream sticker--b" aria-hidden="true">Orçamento na hora</span>
+          <span class="sticker sticker--signal sticker--c" aria-hidden="true">Aqui todo mundo é bem-vindo <span class="flag-pride"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. TRUST STRIP
+         ========================================================== -->
+    <section class="trust" id="destaques" aria-labelledby="destaques-title">
+      <h2 class="sr-only" id="destaques-title">Destaques da MV CELL</h2>
+      <div class="marquee">
+        <div class="marquee__track">
+          <p class="marquee__group">
+            <span><svg class="icon marquee__star" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>Nota 5,0</span><span class="marquee__sep" aria-hidden="true">·</span>
+            <span>182 clientes avaliaram</span><span class="marquee__sep" aria-hidden="true">·</span>
+            <span>Atendimento familiar</span><span class="marquee__sep" aria-hidden="true">·</span>
+            <span>Orçamento rápido</span><span class="marquee__sep" aria-hidden="true">·</span>
+            <span>Garantia de 90 dias</span><span class="marquee__sep" aria-hidden="true">·</span>
+            <span>LGBTQ+ friendly</span><span class="marquee__sep" aria-hidden="true">·</span>
+            <span>Acessórios a pronta entrega</span><span class="marquee__sep" aria-hidden="true">·</span>
+          </p>
+          <p class="marquee__group" aria-hidden="true">
+            <span><svg class="icon marquee__star" focusable="false"><use href="#i-star"/></svg>Nota 5,0</span><span class="marquee__sep">·</span>
+            <span>182 clientes avaliaram</span><span class="marquee__sep">·</span>
+            <span>Atendimento familiar</span><span class="marquee__sep">·</span>
+            <span>Orçamento rápido</span><span class="marquee__sep">·</span>
+            <span>Garantia de 90 dias</span><span class="marquee__sep">·</span>
+            <span>LGBTQ+ friendly</span><span class="marquee__sep">·</span>
+            <span>Acessórios a pronta entrega</span><span class="marquee__sep">·</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         4. SERVIÇOS
+         ========================================================== -->
+    <section class="section section--cream" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Assistência técnica</p>
+          <h2 class="section-title" id="servicos-title">O que a gente resolve</h2>
+          <p class="section-sub">Fala o problema, a gente explica o que tem e passa o valor antes de mexer.</p>
+        </div>
+
+        <ul class="services" data-stagger>
+          <li class="card service" data-reveal>
+            <span class="service__icon" aria-hidden="true"><svg class="icon"><use href="#i-screen"/></svg></span>
+            <h3 class="card__title">Troca de tela</h3>
+            <p class="service__desc">Trincou, manchou ou parou o toque? A gente troca.</p>
+            <a class="service__link stretched" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20or%C3%A7amento%20de%20troca%20de%20tela.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero orçamento de troca de tela. Meu celular é: " data-origin="servico_tela" target="_blank" rel="noopener noreferrer">Orçar esse serviço<span class="sr-only">: troca de tela</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card service" data-reveal>
+            <span class="service__icon" aria-hidden="true"><svg class="icon"><use href="#i-battery"/></svg></span>
+            <h3 class="card__title">Troca de bateria</h3>
+            <p class="service__desc">Descarrega rápido ou desliga sozinho? Bateria nova.</p>
+            <a class="service__link stretched" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20or%C3%A7amento%20de%20troca%20de%20bateria.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero orçamento de troca de bateria. Meu celular é: " data-origin="servico_bateria" target="_blank" rel="noopener noreferrer">Orçar esse serviço<span class="sr-only">: troca de bateria</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card service" data-reveal>
+            <span class="service__icon" aria-hidden="true"><svg class="icon"><use href="#i-plug-zap"/></svg></span>
+            <h3 class="card__title">Conector de carga</h3>
+            <p class="service__desc">Só carrega com o cabo torto? A gente resolve.</p>
+            <a class="service__link stretched" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20or%C3%A7amento%20de%20conector%20de%20carga.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero orçamento de conector de carga. Meu celular é: " data-origin="servico_conector" target="_blank" rel="noopener noreferrer">Orçar esse serviço<span class="sr-only">: conector de carga</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card service" data-reveal>
+            <span class="service__icon" aria-hidden="true"><svg class="icon"><use href="#i-camera"/></svg></span>
+            <h3 class="card__title">Câmera e áudio</h3>
+            <p class="service__desc">Foto borrada, som baixo ou microfone falhando.</p>
+            <a class="service__link stretched" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20or%C3%A7amento%20de%20c%C3%A2mera%20e%20%C3%A1udio.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero orçamento de câmera e áudio. Meu celular é: " data-origin="servico_camera" target="_blank" rel="noopener noreferrer">Orçar esse serviço<span class="sr-only">: câmera e áudio</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card service" data-reveal>
+            <span class="service__icon" aria-hidden="true"><svg class="icon"><use href="#i-gear"/></svg></span>
+            <h3 class="card__title">Software e sistema</h3>
+            <p class="service__desc">Travando, lento ou cheio de erro? Deixa com a gente.</p>
+            <a class="service__link stretched" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20or%C3%A7amento%20de%20software%20e%20sistema.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero orçamento de software e sistema. Meu celular é: " data-origin="servico_software" target="_blank" rel="noopener noreferrer">Orçar esse serviço<span class="sr-only">: software e sistema</span> <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="card service" data-reveal>
+            <span class="service__icon" aria-hidden="true"><svg class="icon"><use href="#i-droplet"/></svg></span>
+            <h3 class="card__title">Celular que molhou</h3>
+            <p class="service__desc">Desliga, não carrega e traz rápido. Quanto antes, melhor.</p>
+            <a class="service__link stretched" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20or%C3%A7amento%20de%20celular%20que%20molhou.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero orçamento de celular que molhou. Meu celular é: " data-origin="servico_molhou" target="_blank" rel="noopener noreferrer">Orçar esse serviço<span class="sr-only">: celular que molhou</span> <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+
+        <div class="section-cta" data-reveal>
+          <p>Não achou o seu problema na lista? Conta pra gente.</p>
+          <a class="btn btn--signal" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento.%20O%20problema%20do%20meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero um orçamento. O problema do meu celular é: " data-origin="servicos_outro" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+            Pedir orçamento no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         5. OUTLET
+         ========================================================== -->
+    <section class="section section--ink grain has-wave-top has-wave-bottom" id="outlet" aria-labelledby="outlet-title">
+      <svg class="wave wave--top" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+      <div class="container">
+        <div class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Outlet Cell</p>
+            <h2 class="section-title" id="outlet-title">Outlet Cell: celular bom, preço de outlet.</h2>
+            <p class="outlet__note">Valores ilustrativos. Consulte disponibilidade e preço atualizado no WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="carousel" role="region" aria-roledescription="carrossel" aria-label="Celulares outlet" data-carousel data-reveal>
+          <div class="carousel__controls">
+            <button class="carousel__btn" type="button" data-carousel-prev disabled aria-label="Ver celulares anteriores">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-left"/></svg>
+            </button>
+            <button class="carousel__btn" type="button" data-carousel-next aria-label="Ver próximos celulares">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-right"/></svg>
+            </button>
+          </div>
+          <ul class="carousel__track carousel__track--outlet" data-carousel-track data-products>
+            <li class="product product--ask" data-products-end>
+              <a class="product-ask" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Procuro%20um%20celular%2C%20voc%C3%AAs%20t%C3%AAm%20o%20modelo%3A%20" data-wa-msg="Olá! Procuro um celular, vocês têm o modelo: " data-origin="outlet_outro" target="_blank" rel="noopener noreferrer">
+                <span class="product-ask__icon" aria-hidden="true"><svg class="icon"><use href="#i-wa"/></svg></span>
+                <span class="product-ask__title">Não achou o seu? Pergunta pra gente <span aria-hidden="true">→</span></span>
+                <span class="product-ask__text">Fala o modelo que você procura e a gente verifica pra você.</span>
+              </a>
+            </li>
+          </ul>
+          <noscript>
+            <p class="outlet__noscript">
+              <a href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20ver%20os%20celulares%20outlet%20dispon%C3%ADveis." data-wa-msg="Olá! Vim pelo site e quero ver os celulares outlet disponíveis." data-origin="outlet_noscript" target="_blank" rel="noopener noreferrer">Veja os modelos disponíveis no WhatsApp</a>
+            </p>
+          </noscript>
+        </div>
+      </div>
+      <svg class="wave wave--bottom" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+    </section>
+
+    <!-- ==========================================================
+         6. ACESSÓRIOS
+         ========================================================== -->
+    <section class="section section--cream" id="acessorios" aria-labelledby="acessorios-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Acessórios</p>
+          <h2 class="section-title" id="acessorios-title">Acessórios pra sair daqui com tudo</h2>
+          <p class="section-sub">Toca na categoria e pergunta se tem pro seu modelo.</p>
+        </div>
+
+        <ul class="bento" data-stagger>
+          <li class="bento__item bento__item--capinhas" data-reveal>
+            <a class="tile tile--volt" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Procuro%20capinhas%20para%20o%20modelo%3A%20" data-wa-msg="Olá! Procuro capinhas para o modelo: " data-origin="acessorio_capinhas" target="_blank" rel="noopener noreferrer">
+              <span class="tile__icon" aria-hidden="true"><svg class="icon"><use href="#i-case"/></svg></span>
+              <span class="tile__body">
+                <span class="tile__title">Capinhas</span>
+                <span class="tile__text">Do básico ao estiloso, pra vários modelos.</span>
+              </span>
+              <span class="tile__cta">Pedir no WhatsApp <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--peliculas" data-reveal>
+            <a class="tile tile--paper" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Procuro%20pel%C3%ADculas%20para%20o%20modelo%3A%20" data-wa-msg="Olá! Procuro películas para o modelo: " data-origin="acessorio_peliculas" target="_blank" rel="noopener noreferrer">
+              <span class="tile__icon" aria-hidden="true"><svg class="icon"><use href="#i-film"/></svg></span>
+              <span class="tile__body">
+                <span class="tile__title">Películas</span>
+                <span class="tile__text">Proteção pra tela não trincar de novo.</span>
+              </span>
+              <span class="tile__cta">Pedir no WhatsApp <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--carregadores" data-reveal>
+            <a class="tile tile--ink" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Procuro%20carregadores%20e%20cabos%20para%20o%20modelo%3A%20" data-wa-msg="Olá! Procuro carregadores e cabos para o modelo: " data-origin="acessorio_carregadores" target="_blank" rel="noopener noreferrer">
+              <span class="tile__icon" aria-hidden="true"><svg class="icon"><use href="#i-plug"/></svg></span>
+              <span class="tile__body">
+                <span class="tile__title">Carregadores e cabos</span>
+                <span class="tile__text">Pra iPhone e Android, do cabo à fonte.</span>
+              </span>
+              <span class="tile__cta">Pedir no WhatsApp <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--fones" data-reveal>
+            <a class="tile tile--paper" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Procuro%20fones%20para%20o%20modelo%3A%20" data-wa-msg="Olá! Procuro fones para o modelo: " data-origin="acessorio_fones" target="_blank" rel="noopener noreferrer">
+              <span class="tile__icon" aria-hidden="true"><svg class="icon"><use href="#i-headphones"/></svg></span>
+              <span class="tile__body">
+                <span class="tile__title">Fones</span>
+                <span class="tile__text">Com fio ou bluetooth.</span>
+              </span>
+              <span class="tile__cta">Pedir no WhatsApp <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--suportes" data-reveal>
+            <a class="tile tile--paper" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Procuro%20suportes%20para%20o%20modelo%3A%20" data-wa-msg="Olá! Procuro suportes para o modelo: " data-origin="acessorio_suportes" target="_blank" rel="noopener noreferrer">
+              <span class="tile__icon" aria-hidden="true"><svg class="icon"><use href="#i-stand"/></svg></span>
+              <span class="tile__body">
+                <span class="tile__title">Suportes</span>
+                <span class="tile__text">Pro carro, pra mesa e pra gravar.</span>
+              </span>
+              <span class="tile__cta">Pedir no WhatsApp <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+          <li class="bento__item bento__item--caixas" data-reveal>
+            <a class="tile tile--graphite" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Procuro%20caixas%20de%20som%20para%20o%20modelo%3A%20" data-wa-msg="Olá! Procuro caixas de som para o modelo: " data-origin="acessorio_caixas" target="_blank" rel="noopener noreferrer">
+              <span class="tile__icon" aria-hidden="true"><svg class="icon"><use href="#i-speaker"/></svg></span>
+              <span class="tile__body">
+                <span class="tile__title">Caixas de som</span>
+                <span class="tile__text">Som alto pra levar pra qualquer lugar.</span>
+              </span>
+              <span class="tile__cta">Pedir no WhatsApp <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="section-cta" data-reveal>
+          <p>Tem acessório a pronta entrega. Pergunta se tem pro seu modelo.</p>
+          <a class="btn btn--signal" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20quais%20acess%C3%B3rios%20voc%C3%AAs%20t%C3%AAm%20para%20o%20modelo%3A%20" data-wa-msg="Olá! Vim pelo site e quero saber quais acessórios vocês têm para o modelo: " data-origin="acessorios" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+            Perguntar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         7. COMO FUNCIONA
+         ========================================================== -->
+    <section class="section section--graphite grain has-wave-top has-wave-bottom" id="como-funciona" aria-labelledby="como-funciona-title">
+      <svg class="wave wave--top" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Como funciona</p>
+          <h2 class="section-title" id="como-funciona-title">Do quebrado ao funcionando em 4 passos</h2>
+        </div>
+
+        <div class="steps" data-steps>
+          <div class="steps__rail" aria-hidden="true">
+            <span class="steps__fill"></span>
+            <span class="steps__runner">
+              <span class="battery">
+                <span class="battery__body"><span class="battery__level"></span><span class="battery__pct" data-battery-pct>100%</span></span>
+                <span class="battery__tip"></span>
+              </span>
+            </span>
+          </div>
+          <ol class="steps__list">
+            <li class="step" data-step>
+              <span class="step__dot" aria-hidden="true">1</span>
+              <div class="step__body">
+                <h3 class="step__title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg>Chama no WhatsApp</h3>
+                <p>Conta o que aconteceu e qual é o modelo do celular.</p>
+              </div>
+            </li>
+            <li class="step" data-step>
+              <span class="step__dot" aria-hidden="true">2</span>
+              <div class="step__body">
+                <h3 class="step__title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-receipt"/></svg>Recebe o orçamento</h3>
+                <p>A gente passa o valor e o prazo antes de mexer em qualquer coisa.</p>
+              </div>
+            </li>
+            <li class="step" data-step>
+              <span class="step__dot" aria-hidden="true">3</span>
+              <div class="step__body">
+                <h3 class="step__title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-store"/></svg>Traz na loja</h3>
+                <p>Estr. dos Orquidófilos, 822. Não precisa agendar.</p>
+              </div>
+            </li>
+            <li class="step" data-step>
+              <span class="step__dot" aria-hidden="true">4</span>
+              <div class="step__body">
+                <h3 class="step__title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone-ok"/></svg>Sai com o celular funcionando</h3>
+                <p>Com 90 dias de garantia na peça e na mão de obra.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="section-cta section-cta--dark" data-reveal>
+          <p>O passo 1 leva menos de um minuto.</p>
+          <a class="btn btn--signal" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento.%20Meu%20celular%20%C3%A9%3A%20" data-wa-msg="Olá! Vim pelo site e quero fazer um orçamento. Meu celular é: " data-origin="como_funciona" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+            Começar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+      <svg class="wave wave--bottom" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+    </section>
+
+    <!-- ==========================================================
+         8. AVALIAÇÕES
+         ========================================================== -->
+    <section class="section section--cream" id="avaliacoes" aria-labelledby="avaliacoes-title">
+      <div class="container">
+        <div class="reviews-head">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Avaliações</p>
+            <h2 class="section-title" id="avaliacoes-title">Quem vem, recomenda.</h2>
+            <p class="section-sub">Avaliações reais de clientes no Google.</p>
+          </div>
+
+          <div class="score card" data-reveal>
+            <p class="score__value">5,0</p>
+            <div class="score__meta">
+              <span class="stars stars--lg" role="img" aria-label="5 de 5 estrelas">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>
+              </span>
+              <p class="score__count"><span class="score__num" data-counter="182" aria-hidden="true">182</span><span class="sr-only">182</span> avaliações no Google</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel" role="region" aria-roledescription="carrossel" aria-label="Depoimentos de clientes" data-carousel data-reveal>
+          <div class="carousel__controls">
+            <button class="carousel__btn" type="button" data-carousel-prev disabled aria-label="Ver depoimentos anteriores">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-left"/></svg>
+            </button>
+            <button class="carousel__btn" type="button" data-carousel-next aria-label="Ver próximos depoimentos">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-right"/></svg>
+            </button>
+          </div>
+          <ul class="carousel__track carousel__track--reviews" data-carousel-track tabindex="0" aria-label="Lista de depoimentos">
+            <li class="review">
+              <figure class="review__card card">
+                <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+                <blockquote class="review__text"><p>Eu gosto é um ambiente familiar sempre recebe a gente bem com disposição</p></blockquote>
+                <figcaption class="review__author">
+                  <span class="review__avatar review__avatar--signal" aria-hidden="true">C</span>
+                  <span class="review__who"><span class="review__name">Cibele Rodinele</span><span class="review__seal">Avaliação do Google</span></span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="review">
+              <figure class="review__card card">
+                <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+                <blockquote class="review__text"><p>Atendimento excelente, gostei muito do trabalho no meu celular 👏🏻👏🏻👏🏻</p></blockquote>
+                <figcaption class="review__author">
+                  <span class="review__avatar review__avatar--volt" aria-hidden="true">I</span>
+                  <span class="review__who"><span class="review__name">Iury Souza Alves</span><span class="review__seal">Avaliação do Google</span></span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="review">
+              <figure class="review__card card">
+                <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+                <blockquote class="review__text"><p>Atendimento muito bom, há sempre uma resposta satisfatória para as dúvidas do cliente, eficiência no atendimento e conhecimento dos serviços e produtos oferecidos.</p></blockquote>
+                <figcaption class="review__author">
+                  <span class="review__avatar review__avatar--signal" aria-hidden="true">M</span>
+                  <span class="review__who"><span class="review__name">Maria Solimar Makiyama</span><span class="review__seal">Avaliação do Google</span></span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="review">
+              <figure class="review__card card">
+                <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+                <blockquote class="review__text"><p>Comprei um celular e atendeu todas minhas expectativas.</p></blockquote>
+                <figcaption class="review__author">
+                  <span class="review__avatar review__avatar--volt" aria-hidden="true">C</span>
+                  <span class="review__who"><span class="review__name">Cliente do Google</span><span class="review__seal">Avaliação do Google</span></span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="review">
+              <figure class="review__card card">
+                <span class="stars" role="img" aria-label="5 de 5 estrelas"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+                <blockquote class="review__text"><p>Equipe maravilhosa, prestativos e ótimo atendimento, super recomendo!!!</p></blockquote>
+                <figcaption class="review__author">
+                  <span class="review__avatar review__avatar--signal" aria-hidden="true">C</span>
+                  <span class="review__who"><span class="review__name">Cliente do Google</span><span class="review__seal">Avaliação do Google</span></span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-cta" data-reveal>
+          <a class="btn btn--outline" href="https://www.google.com/maps/place/?q=place_id:ChIJnflX-0KrzpQRfvhOjJpKshw" target="_blank" rel="noopener noreferrer">
+            Ver todas as avaliações no Google
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"/></svg>
+          </a>
+          <a class="btn btn--signal" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20vi%20as%20avalia%C3%A7%C3%B5es%20e%20quero%20fazer%20um%20or%C3%A7amento." data-wa-msg="Olá! Vim pelo site, vi as avaliações e quero fazer um orçamento." data-origin="avaliacoes" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+            Quero ser atendido também
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         9. DIFERENCIAIS
+         ========================================================== -->
+    <section class="section section--ink grain has-wave-top has-wave-bottom" id="diferenciais" aria-labelledby="diferenciais-title">
+      <svg class="wave wave--top" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Diferenciais</p>
+          <h2 class="section-title" id="diferenciais-title">Por que o bairro confia na gente</h2>
+        </div>
+
+        <ul class="perks" data-stagger>
+          <li class="perk" data-reveal>
+            <span class="perk__check" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+            <h3 class="perk__title">Ambiente familiar</h3>
+            <p>Atendimento de perto e sem pressa, do jeito que você gostaria de ser atendido.</p>
+          </li>
+          <li class="perk" data-reveal>
+            <span class="perk__check" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+            <h3 class="perk__title">Explica tudo antes de mexer</h3>
+            <p>Você sabe o problema, o valor e o prazo antes de qualquer conserto.</p>
+          </li>
+          <li class="perk" data-reveal>
+            <span class="perk__check" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+            <h3 class="perk__title">Garantia de 90 dias</h3>
+            <p>Em todos os serviços, cobrindo peça e mão de obra.</p>
+          </li>
+          <li class="perk" data-reveal>
+            <span class="perk__check" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+            <h3 class="perk__title">Aqui todo mundo é bem-vindo <span aria-hidden="true">🏳️‍🌈</span></h3>
+            <p>Somos uma empresa LGBTQ+ friendly. Respeito aqui é regra.</p>
+          </li>
+        </ul>
+
+        <div class="section-cta section-cta--dark" data-reveal>
+          <p>Vem conhecer a loja ou chama a gente agora.</p>
+          <a class="btn btn--signal" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento." data-wa-msg="Olá! Vim pelo site e quero fazer um orçamento." data-origin="diferenciais" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+      <svg class="wave wave--bottom" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+    </section>
+
+    <!-- ==========================================================
+         10. FAQ
+         ========================================================== -->
+    <section class="section section--cream" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Dúvidas</p>
+          <h2 class="section-title" id="faq-title">Perguntas que a gente sempre ouve</h2>
+          <p class="section-sub">Não achou a sua? Manda no WhatsApp que a gente responde.</p>
+        </div>
+
+        <div class="faq" data-faq>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__q">Quanto custa o conserto?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <div class="faq__a"><div class="faq__a-inner"><p>Depende do modelo e da peça. Manda o modelo no WhatsApp e a gente passa o valor na hora.</p></div></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__q">Quanto tempo demora?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <div class="faq__a"><div class="faq__a-inner"><p>Troca de tela e bateria costuma sair em até 1 hora, se tivermos a peça em estoque. Outros reparos levam de 24 a 48h.</p></div></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__q">Tem garantia?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <div class="faq__a"><div class="faq__a-inner"><p>Sim. 90 dias em todos os serviços, cobrindo peça e mão de obra.</p></div></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__q">Preciso agendar?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <div class="faq__a"><div class="faq__a-inner"><p>Não precisa. Mas chamando antes no WhatsApp, a gente já separa a peça e você espera menos.</p></div></div>
+          </details>
+          <details class="faq__item" data-reveal>
+            <summary class="faq__q">Quais formas de pagamento?<span class="faq__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span></summary>
+            <div class="faq__a"><div class="faq__a-inner"><p>Pix, dinheiro, débito e crédito em até 10x.</p></div></div>
+          </details>
+
+          <div class="section-cta section-cta--left" data-reveal>
+            <a class="btn btn--signal" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida%3A%20" data-wa-msg="Olá! Vim pelo site e tenho uma dúvida: " data-origin="faq" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+              Tirar dúvida no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         11. ONDE ESTAMOS
+         ========================================================== -->
+    <section class="section section--cream section--loja" id="onde-estamos" aria-labelledby="onde-estamos-title" data-map-section>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><svg class="eyebrow__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>Onde estamos</p>
+          <h2 class="section-title" id="onde-estamos-title">Passa aqui na loja</h2>
+        </div>
+
+        <div class="visit">
+          <div class="visit__media">
+            <div class="carousel carousel--photos" role="region" aria-roledescription="carrossel" aria-label="Fotos da loja" data-carousel data-reveal>
+              <div class="carousel__controls">
+                <button class="carousel__btn" type="button" data-carousel-prev disabled aria-label="Ver foto anterior">
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-left"/></svg>
+                </button>
+                <button class="carousel__btn" type="button" data-carousel-next aria-label="Ver próxima foto">
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-right"/></svg>
+                </button>
+              </div>
+              <ul class="carousel__track carousel__track--photos" data-carousel-track tabindex="0" aria-label="Fotos da MV CELL">
+                <li class="photo">
+                  <picture>
+                    <source srcset="assets/img/loja-2.webp" type="image/webp">
+                    <img class="photo__img photo__img--top" src="assets/img/loja-2.jpg" width="413" height="400" loading="lazy" decoding="async" alt="Fachada da loja MV CELL | Outlet Cell em Embu das Artes, com o letreiro de assistência técnica e venda de acessórios">
+                  </picture>
+                </li>
+                <li class="photo">
+                  <picture>
+                    <source srcset="assets/img/loja-1.webp" type="image/webp">
+                    <img class="photo__img" src="assets/img/loja-1.jpg" width="755" height="396" loading="lazy" decoding="async" alt="Técnico da MV CELL consertando um celular na bancada da loja">
+                  </picture>
+                </li>
+                <li class="photo">
+                  <picture>
+                    <source srcset="assets/img/loja-3.webp" type="image/webp">
+                    <img class="photo__img" src="assets/img/loja-3.jpg" width="645" height="329" loading="lazy" decoding="async" alt="Vitrine de acessórios da MV CELL com capinhas, garrafas e caixas de som">
+                  </picture>
+                </li>
+                <li class="photo">
+                  <picture>
+                    <source srcset="assets/img/loja-4.webp" type="image/webp">
+                    <img class="photo__img" src="assets/img/loja-4.jpg" width="677" height="347" loading="lazy" decoding="async" alt="Técnico de luvas abrindo um celular para conserto na bancada da MV CELL">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+
+            <div class="map" data-map data-reveal>
+              <a class="map__placeholder" href="https://www.google.com/maps/place/?q=place_id:ChIJnflX-0KrzpQRfvhOjJpKshw" target="_blank" rel="noopener noreferrer" data-map-load>
+                <span class="map__pin" aria-hidden="true"><svg class="icon"><use href="#i-pin"/></svg></span>
+                <span class="map__label">Toque para carregar o mapa</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="visit__card card" data-reveal>
+            <p class="status status--pill" data-open-status data-status-long>
+              <span class="status__dot" aria-hidden="true"></span>
+              <span class="status__text" data-status-text>Seg a sáb, a partir das 9h</span>
+            </p>
+
+            <h3 class="visit__title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Endereço</h3>
+            <address class="visit__address">
+              Estr. dos Orquidófilos, 822<br>
+              Vila Maria Auxiliadora<br>
+              Embu das Artes - SP, 06843-151
+            </address>
+
+            <h3 class="visit__title"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Horário</h3>
+            <table class="hours">
+              <caption class="sr-only">Horário de funcionamento</caption>
+              <tbody data-hours-table>
+                <tr data-day="1"><th scope="row">Segunda</th><td>9h – 17h</td></tr>
+                <tr data-day="2"><th scope="row">Terça</th><td>9h – 17h</td></tr>
+                <tr data-day="3"><th scope="row">Quarta</th><td>9h – 17h</td></tr>
+                <tr data-day="4"><th scope="row">Quinta</th><td>9h – 17h</td></tr>
+                <tr data-day="5"><th scope="row">Sexta</th><td>9h – 17h</td></tr>
+                <tr data-day="6"><th scope="row">Sábado</th><td>9h – 13h</td></tr>
+                <tr data-day="0"><th scope="row">Domingo</th><td>Fechado</td></tr>
+              </tbody>
+            </table>
+
+            <div class="visit__actions">
+              <a class="btn btn--signal" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20passar%20na%20loja.%20Voc%C3%AAs%20est%C3%A3o%20atendendo%20hoje%3F" data-wa-msg="Olá! Vim pelo site e quero passar na loja. Vocês estão atendendo hoje?" data-origin="onde_estamos" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+                WhatsApp
+              </a>
+              <a class="btn btn--outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=MV+CELL+Embu+das+Artes&amp;destination_place_id=ChIJnflX-0KrzpQRfvhOjJpKshw" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-route"/></svg>
+                Abrir rota
+              </a>
+              <a class="btn btn--outline" href="tel:+5511947840245">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+                Ligar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         12. CTA FINAL
+         ========================================================== -->
+    <section class="cta-final has-wave-top" id="cta-final" aria-labelledby="cta-final-title">
+      <svg class="wave wave--top" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+      <div class="container cta-final__inner">
+        <svg class="cta-final__bars" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>
+        <h2 class="cta-final__title" id="cta-final-title" data-reveal>Celular deu problema? Chama a gente.</h2>
+        <p class="cta-final__sub" data-reveal>Orçamento sem compromisso, direto no WhatsApp.</p>
+        <div class="cta-final__actions" data-reveal>
+          <a class="btn btn--ink btn--lg" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20ajuda%20com%20meu%20celular." data-wa-msg="Olá! Vim pelo site e preciso de ajuda com meu celular." data-origin="final" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+            Chamar no WhatsApp agora
+          </a>
+          <a class="cta-final__call" href="tel:+5511947840245">ou ligue (11) 94784-0245</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       13. FOOTER
+       ========================================================== -->
+  <footer class="footer grain">
+    <svg class="wave wave--top" aria-hidden="true" focusable="false"><use href="#wave"/></svg>
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="#inicio" aria-label="MV CELL, voltar ao início">
+          <svg class="brand__icon" viewBox="0 0 20 16" aria-hidden="true" focusable="false"><rect x="0" y="11" width="3.5" height="5" rx="1"/><rect x="5.5" y="7.5" width="3.5" height="8.5" rx="1"/><rect x="11" y="4" width="3.5" height="12" rx="1"/><rect x="16.5" y="0" width="3.5" height="16" rx="1"/></svg>
+          <span class="brand__name">MV CELL</span>
+        </a>
+        <p class="footer__tagline">Outlet Cell · Assistência técnica, celulares outlet e acessórios.</p>
+        <p class="pride-badge"><span class="pride-badge__flag" aria-hidden="true"></span>LGBTQ+ friendly</p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Endereço</h2>
+        <address>Estr. dos Orquidófilos, 822<br>Vila Maria Auxiliadora<br>Embu das Artes - SP, 06843-151</address>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Contato</h2>
+        <ul class="footer__links">
+          <li><a href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20a%20MV%20CELL." data-wa-msg="Olá! Vim pelo site e quero falar com a MV CELL." data-origin="footer" target="_blank" rel="noopener noreferrer">WhatsApp (11) 94784-0245</a></li>
+          <li><a href="tel:+5511947840245">Ligar (11) 94784-0245</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Horário</h2>
+        <p>Seg–Sex 9h–17h<br>Sáb 9h–13h<br>Dom fechado</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> MV CELL — Embu das Artes/SP</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       14. BARRA FIXA MOBILE + BOTÃO FLUTUANTE
+       ========================================================== -->
+  <div class="sticky-bar" data-sticky-bar>
+    <a class="btn btn--signal sticky-bar__wa" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20ajuda%20com%20meu%20celular." data-wa-msg="Olá! Vim pelo site e preciso de ajuda com meu celular." data-origin="sticky" target="_blank" rel="noopener noreferrer">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+      WhatsApp
+    </a>
+    <a class="btn btn--outline sticky-bar__call" href="tel:+5511947840245">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+      Ligar
+    </a>
+  </div>
+
+  <a class="wa-float" href="https://wa.me/5511947840245?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20ajuda%20com%20meu%20celular." data-wa-msg="Olá! Vim pelo site e preciso de ajuda com meu celular." data-origin="flutuante" target="_blank" rel="noopener noreferrer" aria-label="Chamar a MV CELL no WhatsApp">
+    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+  </a>
+</body>
+</html>
