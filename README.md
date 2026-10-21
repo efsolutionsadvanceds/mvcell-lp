@@ -3,7 +3,7 @@
 Landing page da **MV CELL | Outlet Cell**: assistência técnica de celular, celulares outlet e acessórios em Embu das Artes (SP).
 O objetivo da página é um só: fazer o visitante **chamar no WhatsApp**. Toda seção termina com um botão para o WhatsApp.
 
-🔗 **Site:** https://SEU-USUARIO.github.io/SEU-REPO/
+🔗 **Site:** https://efsolutionsadvanceds.github.io/mvcell-lp/
 
 ---
 
