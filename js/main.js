@@ -83,6 +83,13 @@
     return svg;
   }
 
+  // Formatadores Intl custam caro para criar (dados de fuso/idioma): cria uma vez, quando precisar.
+  const formatterCache = new Map();
+  function formatter(key, create) {
+    if (!formatterCache.has(key)) formatterCache.set(key, create());
+    return formatterCache.get(key);
+  }
+
   // Garante no máximo uma execução por frame (scroll/resize).
   function rafThrottle(fn) {
     let queued = false;
@@ -181,13 +188,13 @@
   };
 
   function getSaoPauloNow(date) {
-    const parts = new Intl.DateTimeFormat('en-US', {
+    const parts = formatter('sp-parts', () => new Intl.DateTimeFormat('en-US', {
       timeZone: CONFIG.timezone,
       weekday: 'short',
       hour: '2-digit',
       minute: '2-digit',
       hourCycle: 'h23',
-    }).formatToParts(date);
+    })).formatToParts(date);
     const get = (type) => (parts.find((part) => part.type === type) || {}).value;
     const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday'));
     const minutes = (Number(get('hour')) % 24) * 60 + Number(get('minute'));
@@ -242,14 +249,14 @@
     const clock = $('[data-clock]');
     const label = $('[data-clock-date]');
     if (clock) {
-      clock.textContent = new Intl.DateTimeFormat('pt-BR', {
+      clock.textContent = formatter('clock', () => new Intl.DateTimeFormat('pt-BR', {
         timeZone: CONFIG.timezone, hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
-      }).format(date);
+      })).format(date);
     }
     if (label) {
-      const text = new Intl.DateTimeFormat('pt-BR', {
+      const text = formatter('date', () => new Intl.DateTimeFormat('pt-BR', {
         timeZone: CONFIG.timezone, weekday: 'long', day: 'numeric', month: 'long',
-      }).format(date);
+      })).format(date);
       label.textContent = text.charAt(0).toUpperCase() + text.slice(1);
     }
   }
@@ -285,12 +292,10 @@
   /* ------------------------------------------------------------------------
      OUTLET: cards renderizados a partir de PRODUCTS (só textContent)
      ------------------------------------------------------------------------ */
-  const priceFormatter = new Intl.NumberFormat('pt-BR', {
-    style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 0,
-  });
-
   function formatPrice(value) {
-    const parts = priceFormatter.formatToParts(value);
+    const parts = formatter('price', () => new Intl.NumberFormat('pt-BR', {
+      style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 0,
+    })).formatToParts(value);
     const pick = (types) => parts.filter((part) => types.includes(part.type)).map((part) => part.value).join('');
     return { currency: pick(['currency']), amount: pick(['integer', 'group', 'decimal', 'fraction']) };
   }
@@ -715,23 +720,36 @@
     });
   }
 
+  // Um módulo por tarefa, devolvendo a thread ao navegador entre eles (nenhuma tarefa longa).
+  function runInSeparateTasks(modules) {
+    const queue = modules.slice();
+    const next = () => {
+      const module = queue.shift();
+      if (!module) return;
+      runModules([module]);
+      setTimeout(next, 0);
+    };
+    next();
+  }
+
   function init() {
-    runModules([initLeadTracking, initHeader, initOpenStatus, initAfterPaint]);
+    runModules([initLeadTracking, initHeader, initAfterPaint]);
     document.documentElement.classList.add('js-ready');
 
     const deferred = [
-      renderProducts,
-      initWhatsAppLinks,
-      initCarousels,
       initReveal,
+      initOpenStatus,
+      initStickyBar,
+      renderProducts,
+      initCarousels,
       initTimeline,
       initCounter,
       initFaq,
       initMap,
-      initStickyBar,
+      initWhatsAppLinks,
       initYear,
     ];
-    requestAnimationFrame(() => setTimeout(() => runModules(deferred), 0));
+    requestAnimationFrame(() => setTimeout(() => runInSeparateTasks(deferred), 0));
   }
 
   init();
